@@ -40,7 +40,7 @@ public class Player {
 	}
 	
 	/**
-	 * Setter for numOfWins
+	 * Setter for numOfWin
 	 * @param numOfWins
 	 */
 	public void setNumOfWins(int numOfWins) {

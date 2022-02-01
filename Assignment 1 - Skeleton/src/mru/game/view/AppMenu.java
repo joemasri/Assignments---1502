@@ -14,6 +14,7 @@ public class AppMenu {
 		input = new Scanner(System.in);
 	}
 	
+	// Main menu
 	public void showMainMenu() {
 		System.out.println("Select one of these options: ");
 		System.out.println("	(P) Play Game");
@@ -22,6 +23,7 @@ public class AppMenu {
 		System.out.println("Enter a choice: |");
 	}
 	
+	// Sub Menu
 	public void showSubMenu() {
 		System.out.println("Select one of these options: ");
 		System.out.println("	(T) Top player (Most number of wins)");
@@ -30,6 +32,7 @@ public class AppMenu {
 		System.out.println("Enter a choice: |");
 	}
 	
+	// Name Prompt
 	public String promptName() {
 		System.out.println("Enter name: ");
 		String name = input.nextLine();
@@ -37,3 +40,5 @@ public class AppMenu {
 		return name;
 	}
 }
+
+

@@ -6,7 +6,7 @@ public class AppDriver {
 		
 		// This is the starting point of the project!
 		// hint - It usually calls method from GameManager class to start the app, so only one or two lines will be written here
-		System.out.println("Hello World");
+		System.out.println("Hello World!");
 
 	}
 
