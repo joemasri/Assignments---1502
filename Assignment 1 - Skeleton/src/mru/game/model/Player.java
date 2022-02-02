@@ -8,18 +8,18 @@ public class Player {
 	 */
 	
 	String name;
-	String id;
+	String balance;
 	int numOfWins;
 	
 	/**
 	 * Player constructor
 	 * @param name
-	 * @param id
+	 * @param balance
 	 * @param numOfWins
 	 */
-	public Player(String name, String id, int numOfWins) {
+	public Player(String name, String balance, int numOfWins) {
 		this.name = name;
-		this.id = id;
+		this.balance = balance;
 		this.numOfWins = numOfWins;
 	}
 	
@@ -32,11 +32,11 @@ public class Player {
 	}
 	
 	/**
-	 * Setter for id
-	 * @param id
+	 * Setter for balance
+	 * @param balance
 	 */
-	public void setId(String id) {
-		this.id = id;
+	public void setBalance(String balance) {
+		this.balance = balance;
 	}
 	
 	/**
@@ -56,11 +56,11 @@ public class Player {
 	}
 	
 	/**
-	 * Getter for id
-	 * @return id
+	 * Getter for balance
+	 * @return balance
 	 */
-	public String getId() {
-		return id;
+	public String getBalance() {
+		return balance;
 	}
 	
 	/**
@@ -72,6 +72,10 @@ public class Player {
 	}
 	
 	public String toString() {
-		return "Name: " + name + " ID: " + id + " Number of Wins: " + numOfWins;
+		return "Name: " + name + " Balance: " + balance + " Number of Wins: " + numOfWins;
+	}
+	
+	public String format() {
+		return name + ";" + balance + ";" + numOfWins;
 	}
 } 
