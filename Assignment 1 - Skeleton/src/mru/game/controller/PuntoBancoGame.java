@@ -8,5 +8,15 @@ public class PuntoBancoGame {
 	 * You should use CardDeck class here
 	 * See the instructions for the game rules
 	 */
+	
+	
+	public PuntoBancoGame() {
+		launchGame();
+	}
+
+	private void launchGame() {
+		System.out.println("Launch Game here: ");
+		
+	}
 
 }

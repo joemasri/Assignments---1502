@@ -22,6 +22,8 @@ public class GameManager {
 	private final String FILE_PATH = "res/CasinoInfo.txt";
 	ArrayList<Player> players;
 	AppMenu appLaun;
+	PuntoBancoGame pbGame;
+	private int initalNumOfWinners = 0;
 
 	public GameManager() throws Exception {
 		players = new ArrayList<>();
@@ -33,10 +35,10 @@ public class GameManager {
 	private void launchApplication() throws IOException {
 		
 		boolean isMenu = true;
-		
+		char option;
 		
 		while(isMenu) {
-		char option = appLaun.showMainMenu();
+		option = appLaun.showMainMenu();
 			switch (option) {
 			case 'p':
 				playGame();
@@ -52,12 +54,23 @@ public class GameManager {
 			}
 		}
 	}
+	
+	
 
 	private void playGame() {
-		// TODO Auto-generated method stub
+		String name = appLaun.promptName();
+		Player p = lookForName(name);
+		
+		if(p == null) {
+			String id = appLaun.promptId();
+			players.add(new Player (name, id, initalNumOfWinners));
+		}
+		
+		pbGame = new PuntoBancoGame();
 		
 	}
 
+	// LAUNCHES SUB MENU
 	private void Search() {
 	char option = appLaun.showSubMenu();
 		switch (option) {
@@ -65,7 +78,8 @@ public class GameManager {
 			findTopPlayer();
 			break;
 		case 'n':
-			Player ply = lookForName();
+			String name = appLaun.promptName();
+			Player ply = lookForName(name);
 			appLaun.showPlayer(ply);
 			break;
 		case 'b':
@@ -73,27 +87,8 @@ public class GameManager {
 		}
 		
 	}
-
-	private Player lookForName() {
-		String name = appLaun.promptName();
-		Player ply = null;
-		
-		for (Player p: players) {
-			if (p.getName().equals(name)) {
-			ply = p;
-			break;
-		}
-	}
-	return ply;
-}
 	
-
-
-	private void findTopPlayer() {
-		// TODO Auto-generated method stub
-		
-	}
-
+	// Print to file writer and close program
 	private void Exit() throws IOException {
 		File casInf = new File(FILE_PATH);
 		PrintWriter pw = new PrintWriter(casInf);
@@ -106,6 +101,25 @@ public class GameManager {
 		}
 		pw.close();
 	}
+	
+	// Find Name of Top Player
+	private void findTopPlayer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	// LAUNCHES NAME SEARCH FROM SUBMENU
+	private Player lookForName(String name) {
+		Player ply = null;
+		
+		for (Player p: players) {
+			if (p.getName().equals(name)) {
+			ply = p;
+			break;
+		}
+	}
+	return ply;
+}
 
 	// Loads data
 	private void loadData() throws IOException {

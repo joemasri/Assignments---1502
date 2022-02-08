@@ -18,22 +18,22 @@ public class AppMenu {
 	
 	// Main menu
 	public char showMainMenu() {
-		System.out.println("Select one of these options: ");
-		System.out.println("(P) Play Game");
-		System.out.println("(S)	Search");
-		System.out.println("(E) Exit");
-		System.out.println("Enter a choice: |");
+		System.out.println("Select one of these options:\n");
+		System.out.println("\t(P) Play Game");
+		System.out.println("\t(S) Search");
+		System.out.println("\t(E) Exit\n");
+		System.out.println("Enter a choice: ");
 		char option = input.nextLine().toLowerCase().charAt(0);
 		return option;
 	}
 	
 	// Sub Menu
 	public char showSubMenu() {
-		System.out.println("Select one of these options: ");
-		System.out.println("(T) Top player (Most number of wins)");
-		System.out.println("(N)	Looking for name");
-		System.out.println("(B) Back to Main menu");
-		System.out.println("Enter a choice: |");
+		System.out.println("Select one of these options:\n");
+		System.out.println("\t(T) Top player (Most number of wins)");
+		System.out.println("\t(N) Looking for name");
+		System.out.println("\t(B) Back to Main menu\n");
+		System.out.println("Enter a choice: ");
 		char option = input.nextLine().toLowerCase().charAt(0);
 		return option;
 	}
@@ -41,13 +41,23 @@ public class AppMenu {
 	// Name Prompt
 	public String promptName() {
 		System.out.println("Enter name: ");
-		String name = input.nextLine().trim();
+		String name = input.nextLine().trim().toLowerCase();
 		
 		return name;
 	}
 	
 	public void showPlayer(Player ply) {
-		System.out.println(ply);
+		if(ply != null)
+			System.out.println(ply);
+		 else 
+			System.out.println("NAME NOT FOUND");
+	}
+
+	public String promptId() {
+		System.out.println("Enter your ID here: ");
+		String id = input.nextLine().trim();
+		
+		return id;
 	}
 
 }
