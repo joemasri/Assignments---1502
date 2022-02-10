@@ -1,5 +1,8 @@
 package mru.game.controller;
 
+import java.util.ArrayList;
+
+import mru.game.model.Player;
 
 public class PuntoBancoGame {
 	
@@ -9,14 +12,18 @@ public class PuntoBancoGame {
 	 * See the instructions for the game rules
 	 */
 	
+	public static void main(String[] args) {
 	
-	public PuntoBancoGame() {
-		launchGame();
-	}
+	//CardDeck set up
+	CardDeck myDeck = new CardDeck();
+	Card currentCard = myDeck.getDeck().remove(0);
+	
+	System.out.println(currentCard);
+	
+	currentCard = myDeck.getDeck().remove(0);
+	System.out.println(currentCard);
 
-	private void launchGame() {
-		System.out.println("Launch Game here: ");
-		
+	System.out.println(myDeck.getDeck().size());
+	
 	}
-
 }

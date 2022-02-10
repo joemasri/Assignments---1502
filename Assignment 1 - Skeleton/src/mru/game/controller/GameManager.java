@@ -19,6 +19,7 @@ public class GameManager {
 	 * A method to find the top players
 	 * Depending on your designing technique you may need and you can add more methods here 
 	 */
+	
 	private final String FILE_PATH = "res/CasinoInfo.txt";
 	ArrayList<Player> players;
 	AppMenu appLaun;
@@ -103,9 +104,16 @@ public class GameManager {
 	}
 	
 	// Find Name of Top Player
-	private void findTopPlayer() {
-		// TODO Auto-generated method stub
-		
+	private Player findTopPlayer() {
+		Player topPlayer = null;
+		for (Player p : players) {
+			if(topPlayer == null) {
+				topPlayer = p;
+			} else if(topPlayer.getNumOfWins() < p.getNumOfWins()) {
+				topPlayer = p;
+			}
+		}
+		return topPlayer;
 	}
 
 	// LAUNCHES NAME SEARCH FROM SUBMENU
