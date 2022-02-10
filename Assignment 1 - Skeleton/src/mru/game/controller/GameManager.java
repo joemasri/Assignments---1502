@@ -104,16 +104,20 @@ public class GameManager {
 	}
 	
 	// Find Name of Top Player
-	private Player findTopPlayer() {
-		Player topPlayer = null;
-		for (Player p : players) {
-			if(topPlayer == null) {
-				topPlayer = p;
-			} else if(topPlayer.getNumOfWins() < p.getNumOfWins()) {
-				topPlayer = p;
-			}
-		}
-		return topPlayer;
+	private void findTopPlayer() {
+		//Player play = new Player(FILE_PATH, 0, 0);
+		Player play = new Player(FILE_PATH,"0", 0);
+
+        for(Player p: players) {
+            if(p.getNumOfWins()>play.getNumOfWins()) {
+                play=p;
+                if(p.getNumOfWins()==play.getNumOfWins()) {
+
+                }
+            }
+        }
+      
+        System.out.println(play);
 	}
 
 	// LAUNCHES NAME SEARCH FROM SUBMENU

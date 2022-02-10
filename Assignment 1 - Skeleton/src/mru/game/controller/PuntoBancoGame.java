@@ -1,9 +1,5 @@
 package mru.game.controller;
 
-import java.util.ArrayList;
-
-import mru.game.model.Player;
-
 public class PuntoBancoGame {
 	
 	/**
