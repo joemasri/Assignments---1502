@@ -14,7 +14,7 @@ public class PuntoBancoGame {
 	
 	public static void main(String[] args) {
 	
-	//CardDeck set up
+	//CardDeck set up, make into class
 	CardDeck myDeck = new CardDeck();
 	Card currentCard = myDeck.getDeck().remove(0);
 	
