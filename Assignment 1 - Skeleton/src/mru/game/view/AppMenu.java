@@ -38,6 +38,22 @@ public class AppMenu {
 		return option;
 	}
 	
+	public char showPlayerBet() {
+		System.out.println("Who do you wanna bet on?:\n");
+		System.out.println("\t(P) Player Wins");
+		System.out.println("\t(B) Banker Wins");
+		System.out.println("\t(T) Tie Game\n");
+		System.out.println("Enter a choice: ");
+		char option = input.nextLine().toLowerCase().charAt(0);
+		return option;
+	}
+	
+	public int betAmount() {
+		System.out.println("How much do you want to bet?:\n");
+		int amount = input.nextInt();
+		return amount;
+	}
+	
 	// Name Prompt
 	public String promptName() {
 		System.out.println("Enter name: ");

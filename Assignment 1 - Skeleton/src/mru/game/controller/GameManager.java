@@ -23,6 +23,7 @@ public class GameManager {
 	private final String FILE_PATH = "res/CasinoInfo.txt";
 	ArrayList<Player> players;
 	AppMenu appLaun;
+	AppMenu appLaunc;
 	PuntoBancoGame pbGame;
 	private int initalNumOfWinners = 0;
 
@@ -66,10 +67,15 @@ public class GameManager {
 			String id = appLaun.promptId();
 			players.add(new Player (name, id, initalNumOfWinners));
 		}
-		
+		//running the method to 
+		appLaun = new AppMenu();
+		appLaunc = new AppMenu();
+		appLaunc.betAmount();
+		appLaun.showPlayerBet();
 		pbGame = new PuntoBancoGame();
 		pbGame.runGame();
 	}
+	
 
 	// LAUNCHES SUB MENU
 	private void Search() {
