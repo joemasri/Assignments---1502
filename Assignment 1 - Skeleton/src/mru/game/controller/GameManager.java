@@ -119,7 +119,7 @@ public class GameManager {
 				}
 			
 			// Save to database
-			System.out.println("||||||");
+			System.out.println("");
 			Exit();
 			} else if(playerBetAmt > p.getBalance()) {
 				System.out.println("NO MORE FUNDS");
@@ -141,7 +141,6 @@ public class GameManager {
 		/*appLaun = new AppMenu();
 		appLaunc = new AppMenu();
 		
-
 		pbGame = new PuntoBancoGame();
 		pbGame.runGame();*/
 	}
