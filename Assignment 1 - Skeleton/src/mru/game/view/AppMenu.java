@@ -38,18 +38,18 @@ public class AppMenu {
 		return option;
 	}
 	
-	public char showPlayerBet() {
-		System.out.println("Who do you want to bet on: \n");
+	public String showPlayerBet() {
+		System.out.println("Who do you want to place your bet on: \n");
 		System.out.println("\t(P) Player Wins");
 		System.out.println("\t(B) Banker Wins");
 		System.out.println("\t(T) Tie Game\n");
 		System.out.println("Enter a choice: ");
-		char option = input.nextLine().toLowerCase().charAt(0);
+		String option = input.nextLine().toLowerCase();
 		return option;
 	}
 	
 	public int betAmount() {
-		System.out.println("How much do you want to bet: \n");
+		System.out.println("How many dollars do you want to bet: \n");
 		int amount = input.nextInt();
 		return amount;
 	}
@@ -68,14 +68,4 @@ public class AppMenu {
 		 else 
 			System.out.println("NAME NOT FOUND");
 	}
-
-	public String promptId() {
-		System.out.println("Enter your ID here: ");
-		String id = input.nextLine().trim();
-		
-		return id;
-	}
-
 }
-
-

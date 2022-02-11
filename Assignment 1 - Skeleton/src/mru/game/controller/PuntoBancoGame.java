@@ -17,7 +17,7 @@ public class PuntoBancoGame {
     ArrayList<Card> bank = new ArrayList<>();
     ArrayList<Card> playerH = new ArrayList<>();
 
-    public void runGame() {
+    public String runGame() {
         boolean winner;
         int bank = 0;
         int playerH = 0;
@@ -25,6 +25,6 @@ public class PuntoBancoGame {
                         "++"+" = ".repeat(10) + "+"+" = ".repeat(10)+"++\n\n";
         System.out.println(title);
 
-
-    }
+        return "";    
+     }
 }
