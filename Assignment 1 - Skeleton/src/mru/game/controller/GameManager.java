@@ -68,7 +68,7 @@ public class GameManager {
 		}
 		
 		pbGame = new PuntoBancoGame();
-		
+		pbGame.runGame();
 	}
 
 	// LAUNCHES SUB MENU
