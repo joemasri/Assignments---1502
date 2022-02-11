@@ -21,10 +21,10 @@ public class PuntoBancoGame {
         boolean winner;
         int bank = 0;
         int playerH = 0;
-        String title = "\n                        -- PUNTO BANCO -- \n"+
+        String title = "\n                        -- PLAYER INFO -- \n"+
                         "++"+" = ".repeat(10) + "+"+" = ".repeat(10)+"++\n\n";
         System.out.println(title);
-
+        
         return "";    
      }
 }

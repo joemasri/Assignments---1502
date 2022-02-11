@@ -73,7 +73,10 @@ public class Player {
 	}
 	
 	public String toString() {
-		return "Name: " + name + " Balance: " + balance + " Number of Wins: " + numOfWins;
+		return "=".repeat(20) +"\nName \n" + "-".repeat(20) +"\n" + name  +"\n"   
+				 +"=".repeat(20) + "\nBalance \n " + "-".repeat(10) + "\n" + balance + "\n" +"=".repeat(20) + 
+				" \nNumber of Wins \n "+ "-".repeat(20) + "\n" + numOfWins  +"\n"+ "=".repeat(20);
+		
 	}
 	
 	public String format() {
