@@ -68,7 +68,6 @@ public class GameManager {
 		} else {
 			 System.out.print("Welcome back " + name + "\nYour balance is: $" + p.getBalance() + "\n");
 		}
-		
 		pbGame = new PuntoBancoGame();
 		pbGame.runGame();
 	}
