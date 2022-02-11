@@ -9,16 +9,16 @@ public class Player {
 	// change balance to double
 	
 	String name;
-	String balance;
+	double balance;
 	int numOfWins;
 	
 	/**
 	 * Player constructor
 	 * @param name
-	 * @param balance
+	 * @param splittedLine
 	 * @param numOfWins
 	 */
-	public Player(String name, String balance, int numOfWins) {
+	public Player(String name, double balance, int numOfWins) {
 		this.name = name;
 		this.balance = balance;
 		this.numOfWins = numOfWins;
@@ -36,7 +36,7 @@ public class Player {
 	 * Setter for balance
 	 * @param balance
 	 */
-	public void setBalance(String balance) {
+	public void setBalance(double balance) {
 		this.balance = balance;
 	}
 	
@@ -60,7 +60,7 @@ public class Player {
 	 * Getter for balance
 	 * @return balance
 	 */
-	public String getBalance() {
+	public double getBalance() {
 		return balance;
 	}
 	

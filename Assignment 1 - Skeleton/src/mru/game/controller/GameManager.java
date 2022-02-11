@@ -59,11 +59,12 @@ public class GameManager {
 	
 	private void playGame() {
 		String name = appLaun.promptName();
+		double startBal = 100;
 		Player p = lookForName(name);
 		
 		if(p == null) {
-			String id = appLaun.promptId();
-			players.add(new Player (name, id, initalNumOfWinners));
+			
+			players.add(new Player (name, startBal, initalNumOfWinners));
 			System.out.print("New player created, \n");
             System.out.print("Welcome " + name + " your balance is: $" + 100 + "\n");
 		} else {
@@ -116,7 +117,7 @@ public class GameManager {
 	// Find Name of Top Player
 	private void findTopPlayer() {
 		//Player play = new Player(FILE_PATH, 0, 0);
-		Player play = new Player(FILE_PATH,"0", 0);
+		Player play = new Player(FILE_PATH, 0, 0);
 
         for(Player p: players) {
             if(p.getNumOfWins()>play.getNumOfWins()) {
@@ -167,7 +168,7 @@ public class GameManager {
 				splittedLine = currentLine.split(";");
 				
 				// Name, balance, numOfWins from player class
-				Player p = new Player(splittedLine[0], splittedLine[1], Integer.parseInt(splittedLine[2]));
+				Player p = new Player(splittedLine[0], Double.parseDouble(splittedLine[1]), Integer.parseInt(splittedLine[2]));
 				players.add(p);
 			}
 			
