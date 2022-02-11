@@ -57,8 +57,6 @@ public class GameManager {
 		}
 	}
 	
-	
-
 	private void playGame() {
 		String name = appLaun.promptName();
 		Player p = lookForName(name);
@@ -66,12 +64,18 @@ public class GameManager {
 		if(p == null) {
 			String id = appLaun.promptId();
 			players.add(new Player (name, id, initalNumOfWinners));
+			System.out.print("New player created, \n");
+            System.out.print("Welcome " + name + " your balance is: $" + 100 + "\n");
+		} else {
+			 System.out.print("Welcome back " + name + "\nYour balance is: $" + p.getBalance() + "\n");
 		}
+
 		//running the method to 
 		appLaun = new AppMenu();
 		appLaunc = new AppMenu();
 		appLaunc.betAmount();
 		appLaun.showPlayerBet();
+
 		pbGame = new PuntoBancoGame();
 		pbGame.runGame();
 	}
