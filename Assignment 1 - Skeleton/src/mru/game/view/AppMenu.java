@@ -39,7 +39,7 @@ public class AppMenu {
 	}
 	
 	public char showPlayerBet() {
-		System.out.println("Who do you wanna bet on?:\n");
+		System.out.println("Who do you want to bet on: \n");
 		System.out.println("\t(P) Player Wins");
 		System.out.println("\t(B) Banker Wins");
 		System.out.println("\t(T) Tie Game\n");
@@ -49,7 +49,7 @@ public class AppMenu {
 	}
 	
 	public int betAmount() {
-		System.out.println("How much do you want to bet?:\n");
+		System.out.println("How much do you want to bet: \n");
 		int amount = input.nextInt();
 		return amount;
 	}
