@@ -38,6 +38,7 @@ public class AppMenu {
 		return option;
 	}
 	
+	// Who to bet on menu
 	public String showPlayerBet() {
 		System.out.println("Who do you want to place your bet on: \n");
 		System.out.println("\t(P) Player Wins");
@@ -48,6 +49,7 @@ public class AppMenu {
 		return option;
 	}
 	
+	// Bet amount prompt
 	public int betAmount() {
 		System.out.println("How many dollars do you want to bet: ");
 		int amount = input.nextInt();
@@ -62,12 +64,13 @@ public class AppMenu {
 		return name;
 	}
 
+	// Enter to continue button
 	public void enterToContinue() {
         System.out.println("Press 'Enter' to continue...");
         input.nextLine();
         }
 
-	
+	// Search for player, name not found method
 	public void showPlayer(Player ply) {
 		if(ply != null)
 			System.out.println(ply);

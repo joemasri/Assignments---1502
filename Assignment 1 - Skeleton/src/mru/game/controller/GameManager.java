@@ -27,6 +27,7 @@ public class GameManager {
 	PuntoBancoGame pbGame;
 	private int initalNumOfWinners = 0;
 
+	// GameManager constructor
 	public GameManager() throws Exception {
 		players = new ArrayList<>();
 		appLaun = new AppMenu();
@@ -39,6 +40,7 @@ public class GameManager {
 		boolean isMenu = true;
 		char option;
 		
+		// Play search exit menu
 		while(isMenu) {
 		option = appLaun.showMainMenu();
 			switch (option) {
@@ -58,7 +60,7 @@ public class GameManager {
 	}
 	
 	
-	
+	// Play game main method
 	private void playGame() throws IOException{
 		
 		String name = appLaun.promptName();
@@ -90,6 +92,8 @@ public class GameManager {
 		
 
 		String showPlayBetChoice;
+		
+		// Show player bet choice and amount
 		showPlayBetChoice = appLaun.showPlayerBet();
 		double playerBetAmt = appLaun.betAmount();
 		
