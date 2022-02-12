@@ -33,11 +33,9 @@ public class PuntoBancoGame {
         boolean winner;
         int bank = 0;
         int playerH = 0;
-        String title = "\n                        -- PLAYER INFO -- \n"+
-                        "++"+" = ".repeat(10) + "+"+" = ".repeat(10)+"++\n\n";
+        String title = "\n   -- PLAYER INFO -- \n"+
+                        "++"+"=".repeat(10) + "+"+"=".repeat(10)+"++\n\n";
         System.out.println(title);
-        
-
         step1();
         
 
@@ -73,7 +71,9 @@ public class PuntoBancoGame {
 		} else if (playersCards1.contains("Ace")) {
 			pCardValue +=  1;
 		}
-		System.out.println("Player card value: " + pCardValue);
+		System.out.println("=".repeat(20));
+		System.out.println("Player card value: \n "+ "-".repeat(20) + "\n" + pCardValue );
+		
 		parsePlayer1.close();
 		return pCardValue;
 	}
@@ -89,7 +89,9 @@ public class PuntoBancoGame {
 				} else if (bankersCards1.contains("Ace")) {
 					bCardValue += 1;
 				}
-				System.out.println("Bank card value: " + bCardValue);
+				System.out.println("=".repeat(20));
+				System.out.println("Bank card value: \n "+ "-".repeat(20) + "\n" + bCardValue );
+				System.out.println("=".repeat(20));
 				parseBanker1.close();
 				return bCardValue;
 	}

@@ -3,13 +3,11 @@ ali;75.0;5
 joee;123.0;10
 alex;546.0;0
 max;123.0;0
-<<<<<<< HEAD
 adar;0.0;0
+adar;123.0;0
 mark;444.0;0
-=======
 adar;123.0;0
 mark;409.0;0
->>>>>>> refs/remotes/origin/master
 quik;100.0;0
 markes;100.0;0
 chris tucker;100.0;0
