@@ -67,7 +67,6 @@ public class GameManager {
 		pbGame = new PuntoBancoGame();
 		
 		if(p == null) {
-
 			String title = "*".repeat(50);
 			String title2 = "*".repeat(3);
 			String title3 = "--";
@@ -88,8 +87,13 @@ public class GameManager {
 			System.out.println(title);
 		}
 		
-		String showPlayBetChoice = appLaun.showPlayerBet();
+		String showPlayBetChoice;
+		showPlayBetChoice = appLaun.showPlayerBet();
 		double playerBetAmt = appLaun.betAmount();
+		
+		if (playerBetAmt > p.getBalance()) {
+			System.out.println("ERROR INSUFFECIENT FUNDS");
+		}
 		
 		//Check if the player bet amount is lower or equal to balance
 		if (playerBetAmt <= p.getBalance()) {
@@ -99,44 +103,43 @@ public class GameManager {
 			
 			// Updates new balance into current balance
 			double currentBal = p.getBalance();
-			//pbGame.runGame();
 			
-			// Run punto blanco
-			String run = pbGame.runGame();
 			
-			// check players choice
-			if(run.equals(showPlayBetChoice)) {
-				if(showPlayBetChoice.equals("t")) {
-					
-					// if player wins from tie, 5x there money
-					playerBetAmt = playerBetAmt * 5;
-					System.out.println("Player Has Won: $" + playerBetAmt);
-					
-					// update winds
-					p.setNumOfWins(p.getNumOfWins()+1);
-					
-					// update balance
-					p.setBalance(playerBetAmt + currentBal);
-				} else {
-					
-					// else 2x player bet plus current balance
-					System.out.println("Player Has Won $" + playerBetAmt);
-					p.setBalance((playerBetAmt * 2) + currentBal);
-				}
+			
+			int whoToBet = -1;
+			boolean bool = false;
+			String option;
+			
+			do {
+				bool = false;
 				
-				//show player loss
-			} else if (run.equals(showPlayBetChoice)) {
-				
-					//current bal minut the amount player bet
-					System.out.println("Player Has Lost $" + playerBetAmt);
-					p.setBalance(currentBal - playerBetAmt);
+				switch (showPlayBetChoice) {
+				case "p":
+					whoToBet = 2;
+					break;
+				case "b":
+					whoToBet = 1;
+					break;
+				case "t":
+					whoToBet = 3;
+				default:
+					System.out.println("ERROR");
+					bool = true;
+					break;
 				}
+			} while (bool);
 			
-			// Save to database
-			System.out.println("");
-			Exit();
-			} else if(playerBetAmt > p.getBalance()) {
-				System.out.println("NO MORE FUNDS");
+			// Run punto banco
+			int run = pbGame.pGame();
+			if(run == whoToBet) {
+				p.setBalance(p.getBalance() + playerBetAmt);
+				p.setNumOfWins(p.getNumOfWins() + 1);
+				System.out.println(p.getName() + "HAS WON $" + Double.toString(playerBetAmt) );
+			} else {
+				p.setBalance(p.getBalance() - playerBetAmt);
+				System.out.println(p.getName() + "HAS LOST $" + Double.toString(playerBetAmt) );
+			}
+		
 		} 
 		
 		// check whethere player would like to play again or end program

@@ -24,9 +24,9 @@ public class PuntoBancoGame {
 	 * Will run entire program through here and return string to gameManager to see if bet is correct
 	 * @return
 	 */
-	public String runGame() {
-		pGame();
-		return "";
+	public int runGame() {
+		
+		return 0;
 	}
 	
 	/**
@@ -35,19 +35,20 @@ public class PuntoBancoGame {
 	 * @param bankerScore
 	 * @return whoWon
 	 */
-	public int findWinner(int playerScore, int bankerScore) {
+	private int findWinner(int playerScore, int bankerScore) {
 		int whoWon = 0;
 		
 		if(playerScore < bankerScore) {
 			System.out.println("Banker won");
-			return whoWon = 1;
+			whoWon = 1;
 		
 		} else if (bankerScore < playerScore) {
 			System.out.println("Player won");
-			return whoWon = 2;
+			whoWon = 2;
 		
 		} else {
 			System.out.println("Tie both scores were equal");
+			whoWon = 3;
 		}
 		
 		return whoWon;
@@ -95,7 +96,6 @@ public class PuntoBancoGame {
 	 * Run game itself
 	 * @return findWinner
 	 */
-	
 	public int pGame() {
 		
 		int pbFirstCards = 0;

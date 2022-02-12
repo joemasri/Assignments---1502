@@ -49,7 +49,7 @@ public class AppMenu {
 	}
 	
 	public int betAmount() {
-		System.out.println("How many dollars do you want to bet: \n");
+		System.out.println("How many dollars do you want to bet: ");
 		int amount = input.nextInt();
 		return amount;
 	}
