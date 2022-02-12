@@ -136,13 +136,6 @@ public class GameManager {
 			System.out.println("Thank you for Playing");
 			System.exit(0);
 		}
-		
-		//running the method to 
-		/*appLaun = new AppMenu();
-		appLaunc = new AppMenu();
-		
-		pbGame = new PuntoBancoGame();
-		pbGame.runGame();*/
 	}
 	
 
