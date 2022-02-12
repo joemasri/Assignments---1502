@@ -78,15 +78,18 @@ public class GameManager {
             System.out.println(title);
 		} else {
 			
-			String title = "*".repeat(50);
-			String title2 = "*".repeat(3);
+			String title = "*".repeat(40);
+			String title2 = "=".repeat(3);
 			String title3 = "--";
 			 
 			System.out.println(title);
-		    System.out.print( title2 + "Welcome back " + name + title3 +"Your balance is: $" + p.getBalance() + title2 + "\n");
+		    System.out.print(title2 + "  Welcome back " + name + "  " + title2 + "\n" + title2 + "  Your balance is: $" + p.getBalance() + "  " + title2 + "\n" + title2 +"  You have "  + p.getNumOfWins() + " Wins  " +title2 + "\n");
 			System.out.println(title);
+			
+			appLaun.enterToContinue();
 		}
 		
+
 		String showPlayBetChoice;
 		showPlayBetChoice = appLaun.showPlayerBet();
 		double playerBetAmt = appLaun.betAmount();
@@ -104,15 +107,13 @@ public class GameManager {
 			// Updates new balance into current balance
 			double currentBal = p.getBalance();
 			
-			
-			
 			int whoToBet = -1;
 			boolean bool = false;
-			String option;
+
 			
 			do {
 				bool = false;
-				
+		
 				switch (showPlayBetChoice) {
 				case "p":
 					whoToBet = 2;
@@ -128,7 +129,7 @@ public class GameManager {
 					break;
 				}
 			} while (bool);
-			
+		
 			// Run punto banco
 			int run = pbGame.pGame();
 			if(run == whoToBet) {

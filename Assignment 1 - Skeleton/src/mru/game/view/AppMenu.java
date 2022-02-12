@@ -61,6 +61,12 @@ public class AppMenu {
 		
 		return name;
 	}
+
+	public void enterToContinue() {
+        System.out.println("Press enter to continue");
+        input.nextLine();
+        }
+
 	
 	public void showPlayer(Player ply) {
 		if(ply != null)
