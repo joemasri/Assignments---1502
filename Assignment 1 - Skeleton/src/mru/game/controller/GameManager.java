@@ -67,11 +67,25 @@ public class GameManager {
 		pbGame = new PuntoBancoGame();
 		
 		if(p == null) {
+
+			String title = "*".repeat(50);
+			String title2 = "*".repeat(3);
+			String title3 = "--";
 			players.add(new Player (name, startBal, initalNumOfWinners));
+			System.out.println(title);
 			System.out.print("New player created, \n");
-            System.out.print("Welcome " + name + " your balance is: $" + 100 + "\n");
+			System.out.println(title);
+            System.out.print("Welcome " + name + title3 +"your balance is: $" + 100 + title2 +"\n");
+            System.out.println(title);
 		} else {
-			 System.out.print("Welcome back " + name + "\nYour balance is: $" + p.getBalance() + "\n");
+			
+			String title = "*".repeat(50);
+			String title2 = "*".repeat(3);
+			String title3 = "--";
+			 
+			System.out.println(title);
+		    System.out.print( title2 + "Welcome back " + name + title3 +"Your balance is: $" + p.getBalance() + title2 + "\n");
+			System.out.println(title);
 		}
 		
 		String showPlayBetChoice = appLaun.showPlayerBet();
