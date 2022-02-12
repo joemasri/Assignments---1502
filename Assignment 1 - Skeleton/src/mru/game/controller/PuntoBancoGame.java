@@ -102,11 +102,17 @@ public class PuntoBancoGame {
 		
 		// Deal first 2 cards to bank and player
 		while (pbFirstCards < 2) {
-			playerCards.add(deck.getRandomCard());
+			
+			playerCards.add(deck.getRandomCard());			
+			
 			bankCards.add(deck.getRandomCard());
+			System.out.println("Players Hand: " + playerCards);
+			System.out.println("Bankers Hand: " + playerCards);
+
 			pbFirstCards++;
 		}
-
+		
+		
 		// get scores
 		int playerScore = getScore(playerCards);
 		int bankScore = getScore(bankCards);

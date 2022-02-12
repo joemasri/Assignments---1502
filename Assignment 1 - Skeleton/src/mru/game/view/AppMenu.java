@@ -63,7 +63,7 @@ public class AppMenu {
 	}
 
 	public void enterToContinue() {
-        System.out.println("Press enter to continue");
+        System.out.println("Press 'Enter' to continue...");
         input.nextLine();
         }
 

@@ -11,3 +11,5 @@ mark;405.0;0
 quik;100.0;0
 markes;100.0;0
 chris tucker;100.0;0
+khosro;100;5
+eli;100;5

@@ -68,19 +68,18 @@ public class GameManager {
 		
 		if(p == null) {
 			String title = "*".repeat(50);
-			String title2 = "*".repeat(3);
-			String title3 = "--";
+			
 			players.add(new Player (name, startBal, initalNumOfWinners));
 			System.out.println(title);
 			System.out.print("New player created, \n");
 			System.out.println(title);
-            System.out.print("Welcome " + name + title3 +"your balance is: $" + 100 + title2 +"\n");
+            System.out.print("Welcome " + name + "   your intitial balance is: $" + 100 + "\n");
             System.out.println(title);
 		} else {
 			
 			String title = "*".repeat(40);
 			String title2 = "=".repeat(3);
-			String title3 = "--";
+		
 			 
 			System.out.println(title);
 		    System.out.print(title2 + "  Welcome back " + name + "  " + title2 + "\n" + title2 + "  Your balance is: $" + p.getBalance() + "  " + title2 + "\n" + title2 +"  You have "  + p.getNumOfWins() + " Wins  " +title2 + "\n");
@@ -168,6 +167,7 @@ public class GameManager {
 			String name = appLaun.promptName();
 			Player ply = lookForName(name);
 			appLaun.showPlayer(ply);
+			appLaun.enterToContinue();
 			break;
 		case 'b':
 			break;
@@ -180,7 +180,7 @@ public class GameManager {
 		File casInf = new File(FILE_PATH);
 		PrintWriter pw = new PrintWriter(casInf);
 		
-		System.out.println("Saving");
+		System.out.println("Saving...\nDone Please Visit us Again!");
 		
 		// for each player, inside the players(array list) do this
 		for (Player p: players) {
