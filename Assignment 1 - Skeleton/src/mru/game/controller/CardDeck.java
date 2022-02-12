@@ -2,6 +2,8 @@ package mru.game.controller;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
+import java.util.Scanner;
 
 /**
  * This class represents a card deck
@@ -48,6 +50,24 @@ public class CardDeck {
 	private void shuffleDeck() {
 		Collections.shuffle(deck); 
 	}
+	
+	public Card getRandomCard() {
+        Scanner input = new Scanner(System.in);
+        
+        //Card number
+        int cardNum[] = {2,3,4,5,6,7,8,9,10};
+       
+        //Card category
+        String card[] = {"Diamonds", "Clubs", "Hearts", "Spades"};
+        
+        //Face cards
+        String face[] = {"Jack","Queen","King","Ace"};
+        
+        //randomizer
+        Random rand = new Random();
+        System.out.println(cardNum[rand.nextInt(cardNum.length)] +card[rand.nextInt(card.length)]);
+        return null;
+    }
 
 	/**
 	 * The deck getter method

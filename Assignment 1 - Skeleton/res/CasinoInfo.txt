@@ -1,10 +1,10 @@
-joe;68.0;0
+joe;61.0;0
 ali;75.0;5
 joee;123.0;10
 alex;546.0;0
 max;123.0;0
 adar;123.0;0
-mark;409.0;0
+mark;405.0;0
 quik;100.0;0
 markes;100.0;0
 chris tucker;100.0;0
